@@ -1,0 +1,238 @@
+/* Page Container with Neon Border */
+.sol-page-container {
+  border: 5px solid #39ff14; /* Neon green border */
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  background: transparent;
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.6);
+  max-width: 900px; /* Restrict container width for PC */
+}
+
+/* Container */
+.sol-container {
+  padding: 20px;
+  background: transparent;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+.sol-header h2 {
+  font-size: 2.5rem;
+  color: #39ff14;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.7);
+}
+
+/* Top Card with Crown */
+.sol-top-card {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(28, 31, 43, 0.9);
+  border: 2px solid #39ff14;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  margin: 0 auto 30px auto; /* Center the top card */
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sol-top-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(57, 255, 20, 0.8);
+}
+
+.sol-crown {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: gold;
+}
+
+/* Title and Details (for All Cards) */
+.sol-idea-title {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #39ff14;
+}
+
+.sol-description {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #d4ff39;
+}
+
+.sol-sender,
+.sol-likes {
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+/* Remaining Cards in One Column (Vertical Layout) */
+.sol-ideas-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spacing between cards */
+  align-items: center;
+}
+
+.sol-idea-card {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(28, 31, 43, 0.9);
+  border: 2px solid #39ff14;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.sol-idea-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px rgba(57, 255, 20, 0.8);
+}
+
+/* Vote Button */
+.sol-vote-button {
+  background: #39ff14;
+  border: none;
+  color: #101522;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sol-vote-button:hover {
+  background: #29cc10;
+}
+
+.sol-voted {
+  background: #444;
+  cursor: not-allowed;
+}
+
+/* Modal */
+.sol-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.sol-modal-content {
+  background: rgba(28, 31, 43, 0.95);
+  color: #fff;
+  border: 2px solid #39ff14;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.7);
+  position: relative;
+}
+
+.sol-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sol-sender-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 15px 0;
+}
+
+/* Falling Stars */
+.sol-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.sol-stars::before,
+.sol-stars::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(to bottom, #39ff14, transparent);
+  animation: falling 2.5s linear infinite;
+}
+
+.sol-stars::after {
+  left: 50%;
+  animation-delay: 1.2s;
+}
+
+@keyframes falling {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sol-top-card,
+  .sol-idea-card {
+    max-width: 90%;
+  }
+
+  .sol-page-container {
+    max-width: 95%;
+  }
+
+  .sol-header h2 {
+    font-size: 2rem;
+  }
+}
+/* Top Card with Crown */
+.sol-top-card {
+  background: linear-gradient(
+    135deg,
+    #8a2be2,
+    #4b0082
+  ); /* Violet gradient background */
+  border: 3px solid #dda0dd; /* Lavender border */
+  box-shadow: 0 0 25px rgba(138, 43, 226, 0.8), 0 0 15px rgba(75, 0, 130, 0.5); /* Violet glow effect */
+  transform: scale(1.05); /* Slightly larger */
+  padding: 25px; /* Extra padding */
+}
+
+/* Crown for Top Card */
+.sol-top-card .sol-crown {
+  font-size: 2.5rem; /* Larger crown icon */
+  color: #dda0dd; /* Lavender color for crown */
+  top: -20px; /* Adjust position */
+}

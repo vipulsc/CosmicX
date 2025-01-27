@@ -1,0 +1,341 @@
+/* Base styles for the button */
+.upar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensures the button stays on top of other content */
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(145deg, #1f2937, #111827);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show the button when visible */
+.upar.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Hover effect */
+.upar:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 255, 255, 0.4),
+    0 4px 6px rgba(0, 255, 255, 0.2);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .upar {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .upar {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}
+
+/* Base styles for the button */
+.upar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(145deg, #1f2937, #111827);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show the button when visible */
+.upar.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Hover effect */
+.upar:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 255, 255, 0.4),
+    0 4px 6px rgba(0, 255, 255, 0.2);
+}
+
+/* Style the rocket icon */
+.rocket-icon {
+  width: 30px;
+  height: 30px;
+  fill: white;
+  transform: translateY(0); /* Initial position */
+  animation: launch 1s ease-in-out infinite; /* Launch animation */
+}
+
+/* Bouncing animation for the rocket icon */
+@keyframes launch {
+  0% {
+    transform: translateY(0); /* Start at the normal position */
+  }
+  50% {
+    transform: translateY(-10px); /* Slight upward motion */
+  }
+  100% {
+    transform: translateY(0); /* Return to normal position */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .upar {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .rocket-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .upar {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .rocket-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+/* Base styles for the button */
+.upar {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #5f5f5f, #1a1a1a);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Show the button when visible */
+.upar.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Hover effect with 3D transformation */
+.upar:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4), 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the rocket icon */
+.rocket-icon {
+  width: 40px;
+  height: 40px;
+  fill: #f8f8f8;
+  transform: translateY(0);
+  transition: transform 1s ease-in-out;
+}
+
+/* Rocket launch animation */
+.upar.launching .rocket-icon {
+  animation: rocket-launch 1s ease-in-out forwards;
+}
+
+@keyframes rocket-launch {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(20deg); /* Moving up and rotating */
+  }
+  100% {
+    transform: translateY(-40px) rotate(0deg); /* Slight shake and complete up */
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Launch text animation */
+.launch-text {
+  position: absolute;
+  top: -30px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff6600;
+  animation: text-launch 1s ease-out forwards;
+}
+
+@keyframes text-launch {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Adjust button size for responsiveness */
+@media screen and (max-width: 768px) {
+  .upar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .rocket-icon {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .upar {
+    width: 45px;
+    height: 45px;
+  }
+
+  .rocket-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+Base styles for the button
+.upar {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #5f5f5f, #1a1a1a);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Show the button when visible */
+.upar.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Hover effect with 3D transformation */
+.upar:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4), 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Countdown text styles */
+.countdown-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff6600;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Countdown animation */
+@keyframes countdown {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Adjust button size for responsiveness */
+@media screen and (max-width: 768px) {
+  .upar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .countdown-text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .upar {
+    width: 45px;
+    height: 45px;
+  }
+
+  .countdown-text {
+    font-size: 16px;
+  }
+}
+

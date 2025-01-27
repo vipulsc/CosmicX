@@ -1,0 +1,258 @@
+.jupiter3D-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #0B2447, #1C4B76, #2C6C9E);
+  overflow: hidden;
+}
+
+.jupiter3D-canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.jupiter3D-info {
+  position: absolute;
+  left: 50px;
+  bottom: 180px;
+  z-index: 2;
+  width: 300px;
+  max-height: 70%;
+  background: rgba(12, 44, 90, 0.8);
+  padding: 20px 30px;
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(135, 206, 235, 0.3);
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+  overflow-y: auto;
+  border: 2px solid rgba(135, 206, 235, 0.3);
+}
+
+.jupiter3D-info:hover {
+  transform: scale(1.05);
+  background: rgba(20, 70, 140, 0.9);
+  box-shadow: 0 6px 30px rgba(135, 206, 235, 0.5);
+}
+
+.jupiter3D-info::-webkit-scrollbar {
+  width: 10px;
+}
+
+.jupiter3D-info::-webkit-scrollbar-thumb {
+  background: rgba(135, 206, 235, 0.5);
+  border-radius: 5px;
+}
+
+.jupiter3D-info::-webkit-scrollbar-thumb:hover {
+  background: rgba(135, 206, 235, 0.7);
+}
+
+.jupiter3D-info h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #87CEEB;
+  text-shadow: 0 0 10px #87CEEB, 0 0 20px #4169E1;
+  border-bottom: 2px solid rgba(135, 206, 235, 0.5);
+  padding-bottom: 10px;
+}
+
+.jupiter3D-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.jupiter3D-info ul li {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #E6E6FA;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #87CEEB;
+}
+
+.toggle-images-button {
+  position: absolute;
+  right: 30px;
+  bottom: 100px;
+  z-index: 3;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(135, 206, 235, 0.8);
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 15px rgba(135, 206, 235, 0.3);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.toggle-images-button:hover {
+  transform: scale(1.1);
+  background-color: rgba(135, 206, 235, 1);
+}
+
+.jupiter-texture-container {
+  display: none;
+}
+
+.jupiter-texture-container.show {
+  display: block;
+  position: absolute;
+  right: 50px;
+  top: 100px;
+  z-index: 2;
+  width: 300px;
+  max-height: 60%;
+  background: rgba(12, 44, 90, 0.8);
+  padding: 20px 30px;
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(135, 206, 235, 0.3);
+  overflow-y: auto;
+  border: 2px solid rgba(135, 206, 235, 0.3);
+}
+
+.jupiter-texture-container h2 {
+  font-size: 1.5rem;
+  color: #87CEEB;
+  text-shadow: 0 0 10px #87CEEB, 0 0 20px #4169E1;
+  border-bottom: 2px solid rgba(135, 206, 235, 0.5);
+  padding-bottom: 10px;
+}
+
+.jupiter-texture-display {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 240px;
+  border: 2px solid rgba(135, 206, 235, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(135, 206, 235, 0.3);
+}
+
+.jupiter-texture-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.jupiter-texture-container::-webkit-scrollbar-thumb {
+  background: rgba(135, 206, 235, 0.5);
+  border-radius: 5px;
+}
+
+.jupiter-texture-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(135, 206, 235, 0.7);
+}
+
+/* Media Queries for Tablets */
+@media screen and (max-width: 1024px) {
+  .jupiter3D-info,
+  .jupiter-texture-container.show {
+      width: calc(100% - 40px);
+      max-width: 400px;
+      left: 20px;
+      right: 20px;
+  }
+  .jupiter-texture-container.show {
+      top: 20px;
+  }
+  .jupiter3D-info {
+      bottom: 20px;
+  }
+  .toggle-images-button {
+      right: 20px;
+      bottom: 160px;
+  }
+}
+
+/* Media Queries for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .jupiter3D-info,
+  .jupiter-texture-container.show {
+      width: calc(100% - 20px);
+      max-width: 100%;
+      left: 10px;
+      right: 10px;
+      padding: 15px;
+      max-height: 40vh;
+  }
+  .jupiter-texture-container.show {
+      top: 10px;
+  }
+  .jupiter3D-info {
+      bottom: 10px;
+  }
+  .jupiter3D-info h1 {
+      font-size: 1.5rem;
+  }
+  .jupiter-texture-container h2 {
+      font-size: 1.3rem;
+  }
+  .jupiter3D-info ul li {
+      font-size: 0.9rem;
+  }
+  .toggle-images-button {
+      right: 30px;
+      bottom: 180px;
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+  }
+}
+
+/* Media Query for Landscape Orientation on Mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .jupiter3D-info,
+  .jupiter-texture-container.show {
+      max-height: 60vh;
+  }
+}
+  @media screen and (max-width: 1024px) {
+    .jupiter3D-canvas-container {
+      margin-top: -120px;
+    }
+    
+    
+    /* Media Queries for Mobile Devices */
+    @media screen and (max-width: 768px) {
+    .jupiter3D-canvas-container {
+      margin-top: -120px;
+    }
+  }
+  
+}
+
+@media screen and (max-width: 1024px) {
+	.jupiter3D-canvas-container {
+	  margin-top: -120px;
+	}
+    .jupiter3D-info{
+        margin-bottom: 2400px;
+        
+    }
+  }
+  
+  /* Media Queries for Mobile Devices */
+  @media screen and (max-width: 768px) {
+	.jupiter3D-canvas-container {
+	  margin-top: -120px;
+	}
+    .jupiter3D-info{
+        margin-bottom: 12px;
+        height: 2000px;
+    }
+    .jupiter3D-info ul,h1{
+        margin-top: 30px;
+    }
+}

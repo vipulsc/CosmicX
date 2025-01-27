@@ -1,0 +1,82 @@
+.mars3D-container {
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
+	overflow: hidden;
+  }
+  
+  .toggle-images-button {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: red;
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 50%;
+	font-size: 20px;
+	cursor: pointer;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+	transition: background-color 0.3s ease;
+	z-index: 999;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	margin-bottom: 100px;
+  }
+  
+  .toggle-images-button:hover {
+	background-color: #0056b3;
+  }
+  
+  .toggle-images-button:focus {
+	outline: none;
+  }
+  
+  .mars-texture-container {
+	margin: 20px;
+	text-align: center;
+  }
+  
+  .mars-texture-display {
+	max-width: 100%;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media screen and (max-width: 1024px) {
+	.mars3D-canvas-container {
+	  margin-top: -120px;
+	}
+  }
+  
+  /* Media Queries for Mobile Devices */
+  @media screen and (max-width: 768px) {
+	.mars3D-canvas-container {
+	  margin-top: -120px;
+	}
+  }
+  @media screen and (max-width: 1024px) {
+	.mars3D-canvas-container {
+	  margin-top: -120px;
+	}
+    .mars3D-info{
+        margin-bottom: 2400px;
+        
+    }
+  }
+  
+  /* Media Queries for Mobile Devices */
+  @media screen and (max-width: 768px) {
+	.mercury-canvas-container {
+	  margin-top: -120px;
+	}
+    .mars3D-info{
+        margin-bottom: 12px;
+        height: 2000px;
+    }
+    .mars3D-info ul,h1{
+        margin-top: 30px;
+    }
+}

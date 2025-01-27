@@ -1,0 +1,117 @@
+.planet-card {
+  border-radius: 0.65rem;
+  border: 2.5px solid #6751b9;
+  padding: 1.5rem;
+  text-align: center;
+  background: #242424;
+  backdrop-filter: blur(1rem);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 12rem;
+}
+
+.planet-card:hover,
+.planet-card.active {
+  background: linear-gradient(180deg, #aa94fe 0%, #7c5fe6 100%);
+}
+
+.planet-card span {
+  font: 1.3rem;
+  font-weight: 500;
+}
+
+.planet-icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2a2252;
+  border-radius: 0.65rem;
+  border: 1.5px solid #6852ba;
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+}
+
+.planet-icon img {
+  width: 2.4rem;
+  height: auto;
+  object-fit: contain;
+}
+/* 
+trying */
+.planet-card {
+  border-radius: 0.65rem;
+  border: 2.5px solid #6751b9;
+  padding: 1.5rem;
+  text-align: center;
+  background: #242424;
+  backdrop-filter: blur(1rem);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 12rem;
+  /* animation: popUp 1s ease-in-out; */
+}
+
+.planet-card:hover,
+.planet-card.active {
+  background: linear-gradient(0deg, #242424 0%, #070317 20%);
+  box-shadow: 0 10px 20px rgba(148, 112, 255, 0.7);
+}
+
+.planet-card span {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.planet-icon {
+  width: 0rem;
+  height: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(0deg, #242424 0%, #070317 20%);
+  border-radius: 0.65rem;
+  border: 1.5px solid transparent;
+  position: absolute;
+  top: 0.1rem;
+  left: -0.1rem;
+  /* background: transparent; */
+}
+
+.planet-icon img {
+  width: 3rem;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .planet-card {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+  }
+
+  .planet-icon {
+    width: 0rem;
+    height: 0rem;
+    top: 0.1rem;
+    left: -0.1rem;
+  }
+}
+
+/* Animations */
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

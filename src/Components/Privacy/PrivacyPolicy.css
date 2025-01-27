@@ -1,0 +1,216 @@
+/* Container for Privacy Policy Page */
+.privacy-container {
+  width: 90%;
+  max-width: 1000px;
+  background: #121212;
+  border-radius: 25px;
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.2);
+  margin-top: 50px;
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInPrivacy 3s ease;
+  overflow-x: hidden; /* Fixed potential scroll issues */
+  margin-bottom: 130px;
+}
+
+@keyframes fadeInPrivacy {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Header Section */
+.privacy-header {
+  text-align: center;
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.privacy-logo {
+  margin-bottom: 30px;
+}
+
+.privacy-logo img {
+  max-width: 180px;
+  filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.6));
+}
+
+.privacy-title {
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #ffffff;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+  animation: glowingTitle 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowingTitle {
+  0% {
+    color: #ffffff;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7),
+      0px 0px 40px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    color: #7fdbff;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7),
+      0px 0px 40px rgba(127, 219, 255, 1);
+  }
+}
+
+/* Content Section */
+.privacy-content {
+  width: 100%;
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  padding: 20px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.privacy-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  animation: slideInSection 1s ease-out;
+}
+
+@keyframes slideInSection {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.privacy-heading {
+  font-size: 2.3rem;
+  color: #7fdbff;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+  text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+  letter-spacing: 2px;
+}
+
+.privacy-paragraph {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.privacy-paragraph:hover {
+  color: #7fdbff;
+  cursor: pointer;
+}
+
+/* Footer Section */
+.privacy-footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Cosmic Background */
+.privacy-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* Starry Effect */
+.privacy-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://cdn.pixabay.com/photo/2017/12/01/09/42/space-2992649_960_720.jpg")
+    repeat;
+  opacity: 0.2;
+  z-index: -2;
+  animation: starryMovement 50s linear infinite;
+}
+
+@keyframes starryMovement {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 200% 200%;
+  }
+}
+
+/* Fun Hover Effects on Links */
+a {
+  color: #7fdbff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .privacy-title {
+    font-size: 2rem;
+  }
+
+  .privacy-heading {
+    font-size: 1.8rem;
+  }
+
+  .privacy-paragraph {
+    font-size: 1rem;
+  }
+
+  .privacy-footer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-title {
+    font-size: 1.5rem;
+  }
+
+  .privacy-heading {
+    font-size: 1.5rem;
+  }
+
+  .privacy-paragraph {
+    font-size: 0.9rem;
+  }
+}

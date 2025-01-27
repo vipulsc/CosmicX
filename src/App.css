@@ -1,0 +1,56 @@
+.planete {
+  padding: 5px 155px;
+}
+/* Universal Scrollbar Styling for Webkit Browsers (Chrome, Safari, Edge) */
+*::-webkit-scrollbar {
+  width: 16px; /* Vertical scrollbar thickness */
+  height: 16px; /* Horizontal scrollbar thickness */
+  border-radius: 10px; /* Rounded edges for the scrollbar */
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    yellow,
+    orange,
+    red
+  ); /* Gradient color */
+  border-radius: 10px; /* Rounded thumb */
+  border: 3px solid rgba(0, 0, 0, 0.1); /* Border for better visibility */
+  transition: background 0.3s ease; /* Smooth thumb color transition */
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05); /* Track color */
+  border-radius: 10px; /* Rounded edges for the track */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: yellow rgba(0, 0, 0, 0.1); /* Track and thumb colors for Firefox */
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile Browsers */
+@media (max-width: 768px) {
+  *::-webkit-scrollbar {
+    width: 12px; /* Slightly thinner on mobile */
+    height: 12px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      to bottom,
+      yellow,
+      orange,
+      red
+    ); /* Gradient color */
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+  }
+}

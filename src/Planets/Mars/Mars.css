@@ -1,0 +1,213 @@
+.mars3D-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mars3D-canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.mars3D-info {
+    position: absolute;
+    left: 50px;
+    bottom: 180px;
+    z-index: 2;
+    width: 300px;
+    max-height: 70%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 30px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(255, 69, 0, 0.3);
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    overflow-y: auto;
+}
+
+.mars3D-info:hover {
+    transform: scale(1.05);
+    background: rgba(255, 69, 0, 0.2);
+    box-shadow: 0 6px 30px rgba(255, 69, 0, 0.5);
+}
+
+.mars3D-info::-webkit-scrollbar {
+    width: 10px;
+}
+
+.mars3D-info::-webkit-scrollbar-thumb {
+    background: rgba(255, 69, 0, 0.5);
+    border-radius: 5px;
+}
+
+.mars3D-info::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 69, 0, 0.7);
+}
+
+.mars3D-info h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ff4500;
+    text-shadow: 0 0 10px #ff4500, 0 0 20px #cc3700;
+}
+
+.mars3D-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mars3D-info ul li {
+    font-size: 1rem;
+    margin: 10px 0;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #bbbbbb;
+}
+
+.toggle-images-button {
+    position: absolute;
+    right: 30px;
+    bottom: 100px;
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 69, 0, 0.8);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.toggle-images-button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 69, 0, 1);
+}
+
+.mars-texture-container {
+    display: none;
+}
+
+.mars-texture-container.show {
+    display: block;
+    position: absolute;
+    right: 50px;
+    bottom: 180px;
+    z-index: 2;
+    width: 300px;
+    max-height: 70%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 30px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(255, 69, 0, 0.3);
+    overflow-y: auto;
+}
+
+.mars-texture-container h2 {
+    font-size: 1.5rem;
+    color: #ff4500;
+}
+
+.mars-texture-display {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    border: 2px solid rgba(255, 69, 0, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+}
+
+.mars-texture-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.mars-texture-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 69, 0, 0.5);
+    border-radius: 5px;
+}
+
+.mars-texture-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 69, 0, 0.7);
+}
+
+/* Media Queries for Tablets */
+@media screen and (max-width: 1024px) {
+    .mars3D-info,
+    .mars-texture-container.show {
+        width: calc(100% - 40px);
+        max-width: 400px;
+        left: 20px;
+        right: 20px;
+    }
+    .mars-texture-container.show {
+        bottom: auto;
+        top: 20px;
+    }
+    .mars3D-info {
+        bottom: 20px;
+    }
+    .toggle-images-button {
+        right: 20px;
+        bottom: 160px;
+    }
+}
+
+/* Media Queries for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .mars3D-info,
+    .mars-texture-container.show {
+        width: calc(100% - 20px);
+        max-width: 100%;
+        left: 10px;
+        right: 10px;
+        padding: 15px;
+        max-height: 40vh;
+    }
+    .mars-texture-container.show {
+        bottom: auto;
+        top: 10px;
+    }
+    .mars3D-info {
+        bottom: 10px;
+    }
+    .mars3D-info h1 {
+        font-size: 1.5rem;
+    }
+    .mars-texture-container h2 {
+        font-size: 1.3rem;
+    }
+    .mars3D-info ul li {
+        font-size: 0.9rem;
+    }
+    .toggle-images-button {
+        right: 30px;
+        bottom: 180px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Media Query for Landscape Orientation on Mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .mars3D-info,
+    .mars-texture-container.show {
+        max-height: 60vh;
+    }
+}

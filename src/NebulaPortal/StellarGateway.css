@@ -1,0 +1,486 @@
+General Styling .stellar-gateway-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Background */
+.stellar-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.stellar-star {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #00ff77;
+  border-radius: 50%;
+}
+
+/* Title */
+.stellar-title {
+  font-size: 4rem;
+  color: #00ff77;
+  text-shadow: 0 0 30px #00ff77, 0 0 60px #00ff77;
+  margin-bottom: 20px;
+}
+
+.stellar-neon-text {
+  color: #00ff77;
+  text-shadow: 0 0 30px #00ff77, 0 0 60px #00ff77;
+}
+
+/* Interaction Section */
+.stellar-interaction-section {
+  text-align: center;
+}
+
+.stellar-prompt {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.stellar-explore-button {
+  background: transparent;
+  color: #00ff77;
+  border: 3px solid #00ff77;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.stellar-explore-button:hover {
+  background: #00ff77;
+  color: black;
+}
+
+/* Galaxy Section */
+.stellar-galaxy-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.stellar-galaxy-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.stellar-planet-grid,
+.stellar-star-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.stellar-planet-card,
+.stellar-star-card {
+  background: transparent;
+  color: #00ff77;
+  border: 3px solid #00ff77;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.stellar-planet-card:hover,
+.stellar-star-card:hover {
+  background: #00ff77;
+  color: black;
+}
+
+.stellar-message {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #a1ffa1;
+}
+
+.stellar-suggestion-button {
+  background: transparent;
+  color: #ff6347;
+  border: 3px solid #ff6347;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.stellar-suggestion-button:hover {
+  background: #ff6347;
+  color: black;
+}
+
+/* Suggestion Section */
+.stellar-suggestion-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.stellar-suggestion-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.stellar-suggestion-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.stellar-suggestion-input {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  width: 300px;
+  border: 2px solid #00ff77;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #00ff77;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.stellar-suggestion-input:focus {
+  outline: none;
+  border-color: #ff6347;
+  box-shadow: 0 0 10px #ff6347;
+}
+
+.stellar-submit-suggestion-button {
+  background: #ff6347;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.stellar-submit-suggestion-button:hover {
+  background: #ff4500;
+}
+
+.stellar-close-button {
+  background: transparent;
+  color: #ff6347;
+  border: 3px solid #ff6347;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.stellar-close-button:hover {
+  background: #ff6347;
+  color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stellar-title {
+    font-size: 2.5rem;
+  }
+
+  .stellar-explore-button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+
+  .stellar-planet-card,
+  .stellar-star-card {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  .stellar-suggestion-button {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+  }
+
+  .stellar-suggestion-input {
+    width: 80%;
+  }
+
+  .stellar-submit-suggestion-button {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+  }
+
+  .stellar-close-button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Submission Confirmation */
+.stellar-submission-confirmation {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.stellar-confirmation-text {
+  font-size: 1.5rem;
+  color: #00ff77;
+  font-weight: bold;
+}
+
+/* ********* new code ******** */
+
+/* General Styling */
+.stellar-gateway-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(
+    circle,
+    #000020,
+    #000010,
+    #000000
+  ); /* Cosmic gradient */
+}
+
+/* Animated Background */
+.stellar-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(circle at center, #1a1a40, #0a0a20, #000000);
+  animation: stellar-nebula 20s infinite alternate;
+}
+
+@keyframes stellar-nebula {
+  0% {
+    background: radial-gradient(circle at center, #1a1a40, #0a0a20, #000000);
+  }
+  50% {
+    background: radial-gradient(circle at 50% 50%, #1a1a60, #0a0a30, #000010);
+  }
+  100% {
+    background: radial-gradient(circle at 25% 75%, #1a1a40, #0a0a20, #000000);
+  }
+}
+
+.stellar-star {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #00ff77;
+  border-radius: 50%;
+  animation: stellar-twinkle 2s infinite alternate;
+}
+
+@keyframes stellar-twinkle {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Title */
+.stellar-title {
+  font-size: 4rem;
+  color: #00ff77;
+  text-shadow: 0 0 30px #00ff77, 0 0 60px #00ff77;
+  margin-bottom: 20px;
+  font-family: "Orbitron", sans-serif; /* Space-themed font */
+  animation: stellar-pulse 3s infinite alternate;
+}
+
+@keyframes stellar-pulse {
+  0% {
+    text-shadow: 0 0 30px #00ff77, 0 0 60px #00ff77, 0 0 90px #00ff77;
+  }
+  100% {
+    text-shadow: 0 0 20px #00ff77, 0 0 50px #00ff77, 0 0 70px #00ff77;
+  }
+}
+
+/* Neon Text */
+.stellar-neon-text {
+  color: #00ff77;
+  text-shadow: 0 0 30px #00ff77, 0 0 60px #00ff77;
+}
+
+/* Interaction Section */
+.stellar-interaction-section {
+  text-align: center;
+}
+
+.stellar-prompt {
+  font-size: 1.2rem;
+  color: #a1ffa1;
+  margin-bottom: 20px;
+}
+
+.stellar-explore-button {
+  background: transparent;
+  color: #00ff77;
+  border: 3px solid #00ff77;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-family: "Orbitron", sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px #00ff77, 0 0 30px #00ff77;
+}
+
+.stellar-explore-button:hover {
+  background: #00ff77;
+  color: black;
+  box-shadow: 0 0 20px #00ff77, 0 0 50px #00ff77;
+}
+
+/* Galaxy Section */
+.stellar-galaxy-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.stellar-galaxy-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00ff77;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: 0 0 30px #00ff77, 0 0 60px #00ff77;
+}
+
+.stellar-planet-grid,
+.stellar-star-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.stellar-planet-card,
+.stellar-star-card {
+  background: rgba(0, 0, 0, 0.8); /* Transparent cosmic panel */
+  color: #00ff77;
+  border: 3px solid #00ff77;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  font-family: "Orbitron", sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00ff77;
+}
+
+.stellar-planet-card:hover,
+.stellar-star-card:hover {
+  background: #00ff77;
+  color: black;
+  box-shadow: 0 0 20px #00ff77;
+}
+
+.stellar-message {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #a1ffa1;
+  text-shadow: 0 0 10px #a1ffa1, 0 0 30px #a1ffa1;
+}
+
+/* Suggestion Section */
+.stellar-suggestion-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ff6347;
+  text-shadow: 0 0 20px #ff6347;
+}
+
+/* Cosmic Animation for Suggestions */
+.stellar-suggestion-button:hover {
+  background: #ff6347;
+  color: black;
+  box-shadow: 0 0 20px #ff6347, 0 0 50px #ff6347;
+}
+
+.stellar-suggestion-input:focus {
+  border-color: #ff6347;
+  box-shadow: 0 0 15px #ff6347;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stellar-title {
+    font-size: 2.5rem;
+  }
+
+  .stellar-explore-button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+}
+/* Exit the Gateway Button */
+.stellar-exit-button {
+  margin-top: 20px; /* Add spacing between buttons */
+  background: transparent;
+  color: #ff4500;
+  border: 3px solid #ff4500;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-family: "Orbitron", sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #ff4500, 0 0 30px #ff4500;
+}
+
+.stellar-exit-button:hover {
+  background: #ff4500;
+  color: black;
+  box-shadow: 0 0 20px #ff4500, 0 0 50px #ff4500;
+}
+/* General Hidden State */
+.stellar-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Reveal State */
+.stellar-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 
+
+
+*/
+
+.stellar-planet-link {
+  text-decoration: none;
+}
