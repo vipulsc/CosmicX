@@ -1,8 +1,11 @@
-# React + Vite
+# CosmicX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 **CosmicX** is a modern web platform that provides an interactive and dynamic space experience. Explore celestial objects, astronomical data, and cosmic phenomena in an engaging way.
 
-Currently, two official plugins are available:
+## 🌌 Features
+- **Interactive UI** for seamless exploration
+- **Real-time data** on celestial bodies
+- **Smooth animations & dynamic effects**
+- **Optimized performance** for a great user experience
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌠 Explore the cosmos with CosmicX: [Live Demo](https://cosmicx.space)
